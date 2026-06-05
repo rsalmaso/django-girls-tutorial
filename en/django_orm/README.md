@@ -37,23 +37,6 @@ Let's try to display all of our posts first. You can do that with the following 
 {% filename %}command-line{% endfilename %}
 ```python
 >>> Post.objects.all()
-Traceback (most recent call last):
-      File "<console>", line 1, in <module>
-NameError: name 'Post' is not defined
-```
-
-Oops! An error showed up. It tells us that there is no Post. It's correct – we forgot to import it first!
-
-{% filename %}command-line{% endfilename %}
-```python
->>> from blog.models import Post
-```
-
-We import the model `Post` from `blog.models`. Let's try displaying all posts again:
-
-{% filename %}command-line{% endfilename %}
-```python
->>> Post.objects.all()
 <QuerySet [<Post: my post title>, <Post: another post title>]>
 ```
 
